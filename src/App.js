@@ -1,25 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import UploadImage from './UploadImage';
+import Editor from './Editor';
+import ImageContextProvider from './store/image-context'
+import { ToastContainer } from 'react-toastify';
+import { useEffect } from 'react';
+import axios from 'axios';
+
+
+const router = createBrowserRouter([
+  {path: '/', element: <UploadImage />},
+  {path: '/editor', element: <Editor /> }
+])
 
 function App() {
+
+  useEffect(() => {
+    const wakeUpServer = async () => {
+      try {
+        await axios.get('https://pixelart-backend-t6lh.onrender.com/ping');
+        console.log('Backend is awake')
+      }catch (error) {
+        console.error('Error waking up the backend:', error);
+      }
+    }
+
+    wakeUpServer();
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ImageContextProvider>
+      <RouterProvider router={router}/>
+      <ToastContainer />
+    </ImageContextProvider>
+    
+  )
 }
 
 export default App;

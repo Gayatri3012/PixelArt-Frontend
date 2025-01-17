@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# PixelArt Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+PixelArt is an image editing application that allows users to adjust brightness, contrast, saturation, rotation, and crop images. This is the frontend repository of the PixelArt project.
 
-## Available Scripts
+## App Screenshot
 
-In the project directory, you can run:
+![App Screenshot](public/appScreenshot.png)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Adjust image brightness, contrast, and saturation.
+- Rotate images in 90-degree increments.
+- Crop images to desired dimensions.
+- Real-time preview of edits.
+- Save the edited image directly to your device using the hosted API.
+- Responsive UI for both desktop and mobile.
+- The app connects to a hosted backend API for image processing and downloading.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- React.js
+- TypeScript
+- Axios
+- React Image Crop
+- CSS for styling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+1. Clone the repository:
+    ```bash
+        git clone <repository-url>
+        cd pixelart-frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
+    ```bash
+        npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Start the development server:
+    ```bash
+        npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+1. Open the application in your browser at http://localhost:3000.
+2. Upload an image to start editing.
+3. Use the tools to adjust brightness, contrast, saturation, rotation, or crop the image.
+4. Save or discard changes as needed.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## API Endpoints
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The frontend interacts with the backend via the following endpoints:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Base URL: `https://pixelart-backend-t6lh.onrender.com`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `POST /brightness`: Adjust image brightness.
+- `POST /contrast`: Adjust image contrast.
+- `POST /saturation`: Adjust image saturation.
+- `POST /rotate`: Rotate the image.
+- `POST /saveAction`: Save the applied changes.
+- `POST /download`: Download the edited image.
 
-## Learn More
+**Note:** The API is hosted and accessible online. Ensure you have a stable internet connection to use the app.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

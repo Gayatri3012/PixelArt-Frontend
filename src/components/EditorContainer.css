@@ -1,0 +1,206 @@
+.editorContainer{
+    /* margin: 40px 0px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 90%;
+}
+
+.editorOptions {
+    /* width: 7%; */
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(41, 44, 49);
+    padding: 0.7rem;
+    border-radius: 16px;
+    height: max-content;
+}
+
+.imageAndRange{
+    width: 93%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.loadingContainer{
+    width: 93%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.editingImage{
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+@media only screen and ( max-width: 660px) {
+    .editorContainer{
+        flex-direction: column-reverse;
+    }
+    .editorOptions{
+        margin-bottom: 10px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 0.7rem 0;
+        border-radius: 0;
+    }
+
+    .imageAndRange{
+        width: 100%;
+    }
+
+    .Range{
+        width: 90%;
+    }
+
+    .Range button{
+
+        background-color: transparent;
+        margin: 0;
+        padding: 5px;
+        border: none;
+        border-radius: 8px;
+      
+    }
+    
+}
+
+@media only screen and ( min-width: 661px)  {
+    .editorOptions{
+        margin-top: 50px;
+        margin-left: 20px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .imageAndRange{
+        width: 93%;
+    }
+
+    .Range{
+        width: 50%;
+    }
+
+}
+
+
+.editorOptionButtons{
+    /* background-color: rgb(255, 255, 255); */
+    background: transparent;
+    padding: 8px;
+    border: none;
+    border-radius: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+.editorOptionButtons:hover {
+    /* background-color: rgb(97, 97, 97); */
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 24px;
+}
+
+.selectedOption{
+    background-color:  #0eccff;
+}
+
+.editorOptions img{
+    padding: 0;
+    margin: 0;
+}
+
+.Range{
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(41, 44, 49);
+    border: none;
+    border-radius: 8px;
+    padding: 5px 0;
+    margin: 10px 10px;
+}
+
+
+.Range p{
+    padding: 5px 0;
+    margin: 0;
+    color:#a0947f;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.Range input{
+    width: 85%;  
+  
+}
+
+
+.Range button{
+
+    background-color: transparent;
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+  
+}
+
+.Range button:hover{
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 24px;
+}
+
+
+.selectImageText{
+    text-align: center;
+    font-size: larger;
+}
+
+.selectImageText a{
+    font-size: x-large;
+    color: #0eccff ;
+}
+
+.cropContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .cropArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+} */
+
+.cropActionButtons{
+    height: 10%;
+}
+
+.cropActionButtons button{
+    margin: 10px 10px;
+    background-color: rgb(58, 58, 58);
+    /* box-shadow: rgba(209, 209, 209, 0.2) 0px 7px 29px 0px; */
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
