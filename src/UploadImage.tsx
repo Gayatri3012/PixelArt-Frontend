@@ -87,6 +87,9 @@ export default function UploadImage() {
 
     return  (
         <div className="uploadImageContainer">
+            <p className='notice'>
+                *Please note: Initial loading may take up to a minute due to hosting on platforms like Render, which go idle after 15 minutes of inactivity.
+            </p>
             <div className="logo-and-name"> 
                 <img className="logo" src='/logo2.png' alt="logo"/>
                 <p style={{fontFamily: 'monospace'}}>PixelArt</p>

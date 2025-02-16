@@ -1,8 +1,31 @@
+.uploadImageContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 50px;
+    background-image: url('/public/bg-copy.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+
 .logo-and-name{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.notice{
+    text-align: center;
+    position: absolute;
+    top: 5px;
+    font-size: 16px;
+    margin: 0;
 }
 
 .logo-and-name p{
@@ -42,6 +65,11 @@
 @media only screen and ( max-width: 800px) {
     .inputBox{
         width: 80%;
+    }
+    
+    .notice{
+        font-size: 14px;
+
     }
 }
 
@@ -86,19 +114,6 @@ input[type="file"] {
 }
 
 
-.uploadImageContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    gap: 70px;
-    background-image: url('/public/bg-copy.jpg');
-    background-size: cover;
-    background-position: center;
-
-}
 
 #uploadButton{
     background-color: #0eccff;
