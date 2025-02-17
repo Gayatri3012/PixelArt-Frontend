@@ -4,11 +4,13 @@ import './UploadImage.css';
 import { ImageContext } from "./store/image-context";
 import axios from "axios";
 import { toast } from "react-toastify";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 export default function UploadImage() {
     const [showInputBox, setShowinputBox] = useState(true)
     const [showInputImage, setShowInputImage] = useState(false)
     const FileInputRef = useRef<HTMLInputElement>(null);
+    const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
     const {
         image, 
@@ -32,6 +34,7 @@ export default function UploadImage() {
 
     const handleUploadImage = () => {
         if(image){
+            setIsLoading(true); 
             updateImageName(image.name);
 
             const formData = new FormData();
@@ -63,9 +66,11 @@ export default function UploadImage() {
                 });
             })
            .then(() => {
+            setIsLoading(false);
                 navigate('/editor');
             })
             .catch(error => {
+                setIsLoading(false);
                 console.error('Error uploading image:', error);
                 toast.error( 'Failed to upload image. Please try again.', {
                     position: "top-center",
@@ -116,7 +121,15 @@ export default function UploadImage() {
                 </>}
 
             </div> 
-            <button id="uploadButton" onClick={handleUploadImage} disabled={!showInputImage}>Upload</button>
+            {isLoading ? (  
+                <div className="loading">
+                    <LoadingSpinner />
+                    <p>Uploading, please wait...</p>
+                </div>
+            ) : (
+                <button id="uploadButton" onClick={handleUploadImage} disabled={!showInputImage}>Upload</button>
+            )}
+            
 
         </div>
     )

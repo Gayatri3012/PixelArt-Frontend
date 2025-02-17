@@ -49,30 +49,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 2px rgba(226, 223, 223, 0.643);
     border-style: dashed;
     transition: background-color 0.3s ease;
 }
-
-@media only screen and ( min-width: 800px) and (max-width: 1200px ) {
-    .inputBox{
-        width: 50%;
-    }
-}
-
-
-@media only screen and ( max-width: 800px) {
-    .inputBox{
-        width: 80%;
-    }
-    
-    .notice{
-        font-size: 14px;
-
-    }
-}
-
 
 .inputBox:hover{
     background-color: rgba(192, 192, 192, 0.371);
@@ -118,9 +99,9 @@ input[type="file"] {
 #uploadButton{
     background-color: #0eccff;
     color: white;
-    padding: 10px;
+    padding: 10px 15px;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     font-weight: 700;
@@ -133,3 +114,40 @@ input[type="file"] {
     transform: scale(1.05);
   
 }
+
+.loading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+
+@media only screen and ( min-width: 800px) and (max-width: 1200px ) {
+    .inputBox{
+        width: 50%;
+    }
+}
+
+
+@media only screen and ( max-width: 800px) {
+    .inputBox{
+        width: 80%;
+    }
+    
+    .notice{
+        font-size: 14px;
+
+    }
+    .custom-file-upload p{
+  
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+       
+    }
+    
+    
+}
+

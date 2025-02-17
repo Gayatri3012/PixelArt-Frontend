@@ -45,56 +45,6 @@
     object-fit: contain;
 }
 
-@media only screen and ( max-width: 660px) {
-    .editorContainer{
-        flex-direction: column-reverse;
-    }
-    .editorOptions{
-        margin-bottom: 10px;
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 100%;
-        padding: 0.7rem 0;
-        border-radius: 0;
-    }
-
-    .imageAndRange{
-        width: 100%;
-    }
-
-    .Range{
-        width: 90%;
-    }
-
-    .Range button{
-
-        background-color: transparent;
-        margin: 0;
-        padding: 5px;
-        border: none;
-        border-radius: 8px;
-      
-    }
-    
-}
-
-@media only screen and ( min-width: 661px)  {
-    .editorOptions{
-        margin-top: 50px;
-        margin-left: 20px;
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .imageAndRange{
-        width: 93%;
-    }
-
-    .Range{
-        width: 50%;
-    }
-
-}
 
 
 .editorOptionButtons{
@@ -139,7 +89,7 @@
     margin: 0;
     color:#a0947f;
     font-family: 'Courier New', Courier, monospace;
-    font-size: x-large;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -153,7 +103,7 @@
 
     background-color: transparent;
     margin: 5px;
-    padding: 10px;
+    padding: 10px ;
     border: none;
     border-radius: 8px;
     transition: box-shadow 0.3s ease;
@@ -203,4 +153,83 @@
     padding: 10px;
     border: none;
     border-radius: 8px;
+}
+
+@media only screen and ( max-width: 660px) {
+    .editorContainer{
+        flex-direction: column-reverse;
+    }
+    .editorOptions{
+        /* margin-bottom: 10px; */
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 0.7rem 0;
+        border-radius: 0;
+    }
+
+    .imageAndRange{
+        width: 100%;
+    }
+
+    .Range{
+        width: 90%;
+    }
+
+    .Range p{
+        font-size: 18px;
+    }
+    
+
+    .Range button{
+        background-color: transparent;
+        margin: 0;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 8px;
+      
+    }
+
+    .Range img{
+        width: 24px;
+        height: 24px;
+    }
+    .loadingContainer{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cropActionButtons{
+        margin-top: 20px;
+    }
+    .cropActionButtons button{
+        margin: 0 10px;
+        padding: 5px;
+    }
+
+    .cropActionButtons img{
+        height: 24px;
+        width: 24px;
+    }
+}
+
+@media only screen and ( min-width: 661px)  {
+    .editorOptions{
+        margin-top: 50px;
+        margin-left: 20px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .imageAndRange{
+        width: 93%;
+    }
+
+    .Range{
+        width: 50%;
+    }
+
 }
